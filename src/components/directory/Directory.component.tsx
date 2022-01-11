@@ -1,18 +1,9 @@
 import React, { FC, useState } from 'react';
+import { ISection } from '../../types/shopTypes';
 import MenuItem from '../menu-item/MenuItem.component';
 import './Directory.styles.scss';
 
-interface IDirectoryProps {}
-
-interface ISection {
-	title: string;
-	imageUrl: string;
-	id: number;
-	size?: string;
-	linkUrl: string;
-}
-
-const Directory: FC<IDirectoryProps> = () => {
+const Directory = () => {
 	const [sections, setSections] = useState<ISection[]>([
 		{
 			title: 'hats',
